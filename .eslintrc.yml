@@ -1,0 +1,17 @@
+extends: airbnb-base
+plugins:
+  - import
+rules:
+  # アロー関数の書き方は省略形で書きたくないときもあるため。
+  arrow-body-style: off
+  # use strictをつけるため。
+  strict: off
+  # 関数呼び出しの場合、末尾カンマをつけたくないため。
+  comma-dangle: off
+  # cloudwatchでログを出力するのにconsole.logを使用するため。
+  no-console: off
+  # aws-sdkはimportしないが、Lambda環境にあらかじめ入っているため。
+  import/no-unresolved:
+    - error
+    - ignore:
+      - aws-sdk

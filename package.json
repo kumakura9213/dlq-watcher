@@ -1,0 +1,30 @@
+{
+  "name": "dlq-watcher",
+  "version": "0.0.1",
+  "description": "Monitor Dead Letter Queue.",
+  "main": "handler.js",
+  "scripts": {
+    "lint": "eslint lib/* handler.js || exit 0",
+    "test": "mocha --require intelli-espower-loader",
+    "coverage": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --require intelli-espower-loader",
+    "deploy": "sls deploy -r ap-northeast-1 -v",
+    "remove": "sls remove -v"
+  },
+  "author": "kunii kazumichi",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "intelli-espower-loader": "^1.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0",
+    "power-assert": "^1.4.4",
+    "serverless": "^1.21.1"
+  }
+}

@@ -1,0 +1,19 @@
+# Logs
+npm-debug.log*
+
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# temp files from editors
+nbproject/
+
+# env
+env.yml
+test/.env
+
+# coverage
+coverage
